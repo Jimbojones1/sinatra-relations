@@ -5,16 +5,17 @@ class ApplicationController < Sinatra::Base
   require 'bundler'
   Bundler.require
 
+  require './config/environments'
 
   # use Rack::Session::Cookie, :key => 'rack.session', :path => '/', :secret => 'some-random-string'
 
 
   # register Sinatra::CrossOrigin
 
-  ActiveRecord::Base.establish_connection(
-    :adapter => 'postgresql',
-    :database => 'item'
-  )
+  # ActiveRecord::Base.establish_connection(
+  #   :adapter => 'postgresql',
+  #   :database => 'item'
+  # )
 
   set :views, File.expand_path('../views', File.dirname(__FILE__))
   # configure do

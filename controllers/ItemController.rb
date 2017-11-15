@@ -12,7 +12,7 @@ class ItemController < ApplicationController
     @item.user_id = params[:user_id]
     @item.save
 
-    binding.pry
+
 
     @item.to_json
 
